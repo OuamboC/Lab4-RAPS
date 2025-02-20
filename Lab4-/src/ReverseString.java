@@ -12,26 +12,34 @@ public class ReverseString {
         //Printing myStack
         System.out.println(myStack);
 
-//        //Create a helper Stack to reverse myStack
-//        Stack<Character> helpermyStack = new Stack<>();
-//        //Looping through myStack to populating helpermyStack
-//        while(!myStack.empty()){
-//            char item = myStack.pop();
-//            helpermyStack.push(item);
-//        }
-//        System.out.println(helpermyStack);
         String vowels = "aeiou";
 
-        //Create a HashSet to store each vowels in helpermyStack
+        //Create a HashSet to store each vowels in myVowels
         HashSet<Character> myVowels = new HashSet<>();
-        for (int i = 0 ; i < s.length(); i++){
-            char c = s.charAt(i);
-            if(vowels.contains(c){
-                char c1 = myStack.peek();
-                s[i] = c1;
-            }
+        for(int i = 0 ; i < vowels.length() ; i++){
+            //Populate the HashSet
+            myVowels.add(vowels.charAt(i));
         }
+        System.out.println(myVowels);
+        //Loop through the String to check if any characters is in myVowels
+        for (int i = 0 ; i < s.length(); i++){
+            //Initialise c by targeting a pointer to any character in a given string (s)
+            char c = s.charAt(i);
+
+            if(myVowels.contains(c)){
+                //Return that vowel character at the top and store it in c1
+                char c1 = myStack.peek();
+                // Update the char at the index of the string
+                c = c1;
+
+            }
+
 
         }
+
+        System.out.println(myStack);
+
+
+            //return myStack.toString();
     }
 }
