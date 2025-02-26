@@ -1,9 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        ReverseString test = new ReverseString();
+        SolutionReversingVowels testing= new SolutionReversingVowels();
+        testing.reverseVowels("leetcode");
+        testing.reverseVowels("Canis");
+        System.out.println( testing.reverseVowels("leetcode"));
+        System.out.println( testing.reverseVowels("IceCreAm"));
 
-        test.reverseVowels("Canis");
-        test.reverseVowels("IceCreAm");
-        test.reverseVowels("leetcode");
     }
 }
